@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tax Calculator</h1>
+    <form id="taxForm">
+        <div class="input-group">
+            <label for="income">Gross Annual Income <i class="bi bi-question-circle" title="Gross anual income is your total salary in a year before deductions"></i></label>
+            <input type="text" id="income" name="income" placeholder="Enter gross annual income &#xF333;" min="0">
+            <span class="error" id="incomeError"></span>
+        </div>
+        <div class="input-group">
+            <label for="extraIncome">Extra Income<i class="bi bi-question-circle"></i></label>
+            <input type="text" id="extraIncome" name="extraIncome" placeholder="Enter extra income from other sources" min="0">
+            <span class="error" id="extraIncomeError"></span>
+        </div>
+        <div class="input-group">
+            <label for="age">Age<i class="bi bi-question-circle"></i></label>
+            <input type="number" id="age" name="age" value="age">
+            <span class="error" id="ageError">Age is mandatory</span>
+        </div>
+        <div class="input-group">
+            <label for="deductions">Deductions<i class="bi bi-question-circle"></i></label>
+            <input type="text" id="deductions" name="deductions" placeholder="Add total applicable deductions" min="0">
+            <span class="error" id="deductionsError"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Your overall income will be</h2>
+      <p id="taxResult"></p>
+      <span class="close">Close</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
