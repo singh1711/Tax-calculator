@@ -22,7 +22,11 @@
         </div>
         <div class="input-group">
             <label for="age">Age<i class="bi bi-question-circle"></i></label>
-            <input type="number" id="age" name="age" value="age">
+            <select id="age" name="age">
+              <option value="<40">&lt;40</option>
+              <option value=">=40 & <60">&ge;40 &lt;60</option>
+              <option value=">=60">&ge;60</option>
+            </select>
             <span class="error" id="ageError">Age is mandatory</span>
         </div>
         <div class="input-group">

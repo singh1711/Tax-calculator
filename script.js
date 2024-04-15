@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     taxForm.addEventListener('submit', function (e) {
       e.preventDefault();
   
-      const age = parseFloat(document.getElementById('age').value);
+      const age = document.getElementById('age').value;
       const income = parseFloat(document.getElementById('income').value);
       const extraIncome = parseFloat(document.getElementById('extraIncome').value);
       const deductions = parseFloat(document.getElementById('deductions').value);
@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!hasErrors) {
         let tax = 0;
         if (income + extraIncome - deductions > 800000) {
-          if (age <40) {
+          if (age === '<40') {
             tax = 0.3 * (income + extraIncome - deductions - 800000);
-          } else if (age >=40 && age <60) {
+          } else if (age === '>=40 & <60') {
             tax = 0.4 * (income + extraIncome - deductions - 800000);
-          } else if (age >=60) {
+          } else if (age === '>=60') {
             tax = 0.1 * (income + extraIncome - deductions - 800000);
           }
         }
